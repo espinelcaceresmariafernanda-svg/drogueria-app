@@ -1,10 +1,10 @@
-<div class="container mt-3">
+<div class="container mt-4">
   <h3>Medicamentos</h3>
 
-  <div class="card p-3 my-3 bg-light">
+  <div class="card p-4 my-3">
     <h5>Agregar Nuevo Medicamento</h5>
-    <div class="row g-2">
-      <div class="col-md-3">
+    <div class="row g-3">
+      <div class="col-md-4">
         <input
           type="text"
           class="form-control"
@@ -12,7 +12,7 @@
           [(ngModel)]="nuevoNombre"
         />
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <input
           type="text"
           class="form-control"
@@ -20,19 +20,24 @@
           [(ngModel)]="nuevaCategoria"
         />
       </div>
-      <div class="col-md-3">
-        <input type="text" class="form-control" placeholder="Stock" [(ngModel)]="nuevoStock" />
+      <div class="col-md-4">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Stock" 
+          [(ngModel)]="nuevoStock" 
+        />
       </div>
-      <div class="col-md-3">
+      <div class="col-12 mt-3">
         <button type="button" class="btn btn-primary w-100" (click)="agregarMedicamento()">
-          Agregar
+          + Agregar Medicamento
         </button>
       </div>
     </div>
   </div>
 
-  <div class="row">
-    <table class="table mt-4">
+  <div class="table-responsive mt-4">
+    <table class="table align-middle">
       <thead>
         <tr>
           <th>Nombre</th>
@@ -43,8 +48,8 @@
       <tbody>
         @for (medicamento of listaMedicamentos; track $index) {
           <tr>
-            <td>{{ medicamento.nombre }}</td>
-            <td>{{ medicamento.categoria }}</td>
+            <td class="fw-medium">{{ medicamento.nombre }}</td>
+            <td><span class="badge bg-light text-primary border border-info-subtle">{{ medicamento.categoria }}</span></td>
             <td>{{ medicamento.stock }}</td>
           </tr>
         }
