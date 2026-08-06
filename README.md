@@ -11,7 +11,7 @@ Enlace del Proyecto Desplegado
 - Angular
 - TypeScript
 - HTML5 / CSS3
-- GitHub Pages (Despliegue)
+- GitHub Pages
 
 ## Funcionalidades Principales
 
